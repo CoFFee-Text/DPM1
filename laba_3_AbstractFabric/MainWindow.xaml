@@ -1,0 +1,29 @@
+﻿<Window x:Class="laba_3_AbstractFabric.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba_3_AbstractFabric"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Choose the color of the figures" Margin="10"/>
+            <TextBlock Text="Colors:" Margin="10 0 0 0"/>
+
+            <ComboBox x:Name="colorsList" SelectionChanged="SelectedIndexColorList" Margin="10">
+                <TextBlock>Red</TextBlock>
+                <TextBlock>Green</TextBlock>
+                <TextBlock>Orange</TextBlock>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" x:Name="for_figures"/>
+    </Grid>
+
+</Window>
