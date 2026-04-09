@@ -83,3 +83,14 @@ Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine("An attempt to reset an already printed document:");
 Console.ResetColor();
 doc.Reset();
+
+Console.ForegroundColor = ConsoleColor.White;
+Console.WriteLine("Document states");
+Console.ResetColor();
+
+Document docStates = new Document("Nachalo.txt");
+
+docStates.SetState(new PrintingState());
+docStates.SetState(new DoneState());
+docStates.SetState(new ErrorState());
+docStates.SetState(new NewState());
