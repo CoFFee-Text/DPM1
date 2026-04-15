@@ -90,6 +90,7 @@ Console.ResetColor();
 
 Document docStates = new Document("Nachalo.txt");
 
+docStates.SetState(new NewState());
 docStates.SetState(new PrintingState());
 docStates.SetState(new DoneState());
 docStates.SetState(new ErrorState());

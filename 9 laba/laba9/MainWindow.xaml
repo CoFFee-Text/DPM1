@@ -1,0 +1,38 @@
+﻿<Window x:Class="laba9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Contact Name" FontSize="15" Margin="10 5"/>
+            <TextBox Text="{Binding ContactName, UpdateSourceTrigger=PropertyChanged}" FontSize="15" Margin="10 0"/>
+
+            <TextBlock Text="Contact Phone number" FontSize="15" Margin="10 5"/>
+            <TextBox Text="{Binding ContactPhoneNum, UpdateSourceTrigger=PropertyChanged}" FontSize="15" Margin="10 0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Width="200">
+            <Button Content="Add Contact" Command="{Binding AddCommand}" FontSize="15" Margin="10 5"/>
+            <Button Content="Delete Contact" Command="{Binding DeleteCommand}" FontSize="15" Margin="10 5"/>
+        </StackPanel>
+
+        <ListView Grid.Row="2" ItemsSource="{Binding Contacts}" SelectedItem="{Binding SelectedContact}" Height="200" Margin="10 0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding ContactName}"/>
+                    <GridViewColumn Header="Phone" DisplayMemberBinding="{Binding ContactPhoneNum}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
