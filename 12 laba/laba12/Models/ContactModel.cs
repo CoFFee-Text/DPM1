@@ -21,7 +21,6 @@ namespace laba12.Models
         // (\+380\d{2})?\-?(\d{3}\-\d{2}\-\d{2}) - + 380ХХ-ХХХ-ХХ-ХХ
         // (\+7\d{10})? - +7XXXXXXXXXX
         // ^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$
-
         public string ContactPhoneNum
         {
             get { return _contactPhoneNum; }

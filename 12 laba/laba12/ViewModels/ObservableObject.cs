@@ -27,4 +27,3 @@ namespace laba12.ViewModels
         }
     }
 }
-

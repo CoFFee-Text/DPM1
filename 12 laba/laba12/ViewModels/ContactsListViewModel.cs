@@ -66,7 +66,7 @@ namespace laba12.ViewModels
             {
                 _dialogService.ShowWarning("A contact with this number already exists!");
                 return;
-            }
+            } 
 
             if (ContactModel.Validate(ContactName, ContactPhoneNum))
             {
