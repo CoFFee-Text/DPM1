@@ -57,6 +57,7 @@ namespace laba13.ViewModels
 
             //Contacts = new ObservableCollection<ContactModel>();
             //Contacts = new ObservableCollection<Contact>(_context.Contacts.ToList()); 
+            Contacts = new ObservableCollection<Contact>();
             LoadContacts();
             AddCommand = new RelayCommand(AddContact, () => CanAddContact());
             DeleteCommand = new RelayCommand(DeleteContact, () => CanDeleteContact());
